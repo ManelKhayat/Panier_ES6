@@ -14,7 +14,7 @@
 * [Licence](#Licence)
 
 ## Demo
-Cliquez sur ce lien [Mon panier](https://manelkhayat.github.io/ManelKhayat_Panier-achat-en-ligne_ES6/) pour voir une démonstration de mon travail.
+Cliquez sur ce lien [Mon panier](https://manelkhayat.github.io/Panier_ES6/) pour voir une démonstration de mon travail.
 
 ## Technologies
 * HTML5 
