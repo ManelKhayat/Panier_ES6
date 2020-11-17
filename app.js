@@ -91,7 +91,7 @@ function actionBtn(btn,produitObj){
 }
 function augmenterQuantité(produitObj,article){
     panierArray.forEach(item => {
-        if(item.nom === produitObj.nom){
+        if(item.img === produitObj.img){
             article.querySelector('.quantité_article').innerText = ++item.quantité;
             article.querySelector('[data-action="diminuer"]').classList.remove('btn--danger');
             Sauvgarder();
@@ -100,7 +100,7 @@ function augmenterQuantité(produitObj,article){
 }
 function diminuerQuantité(produitObj,btn,article){
     panierArray.forEach(item => {
-        if(item.nom === produitObj.nom){
+        if(item.img === produitObj.img){
             if(item.quantité > 1){
              article.querySelector('.quantité_article').innerText = --item.quantité; 
              Sauvgarder();
@@ -116,7 +116,7 @@ function diminuerQuantité(produitObj,btn,article){
 function supprimerArticle(produitObj,btn,article){
     article.classList.add('article__panier--diminué');
     setTimeout(() => article.remove(),230);
-    panierArray = panierArray.filter(itemx => itemx.nom !== produitObj.nom);
+    panierArray = panierArray.filter(itemx => itemx.img !== produitObj.img);
     Sauvgarder();
     btn.innerText = 'Ajouter';
     btn.disabled = false;   
