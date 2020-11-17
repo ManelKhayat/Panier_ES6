@@ -204,7 +204,6 @@
   .panier h3 {
     margin: 0;
   }
-  
   .article_panier{
     display: grid;
     grid-template-columns: 2rem 7rem 3rem auto 1rem auto auto;
