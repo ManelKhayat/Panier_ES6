@@ -56,7 +56,7 @@ function inserer_DOM(produitObj){
     panier.insertAdjacentHTML('beforeend', `
     <div class="article_panier container">
         <img class="img_article_panier" src="${produitObj.img}" alt="${produitObj.nom}">
-        
+        <h3 class="nom_article_panier">${produitObj.nom}</h3>
         <h3 class="prix_article_panier ">${produitObj.prix}</h3>
         <button class="btn btn--primary btn--small btn-space${(produitObj.quantité === 1 ? ' btn--danger':'')}" data-action="diminuer" style="text-align:center;border-radius:10px;width:94%;"><i class="fas fa-minus"></i></button>
         <h3 class="quantité_article">${produitObj.quantité}</h3>
@@ -82,7 +82,7 @@ function actionBtn(btn,produitObj){
     const articles_panier = panier.querySelectorAll('.article_panier');
     articles_panier.forEach(article => {
         // Comparer nom_article_panier avec nom de produit car  nom_article va exister une seule fois dans panier donc le code va s'éxecuter une seule fois
-        if(article.querySelector('.img_article_panier') === produitObj.img){
+        if(article.querySelector('.nom_article_panier').innerText === produitObj.nom){
             article.querySelector('[data-action="augmenter"]').addEventListener('click',() => augmenterQuantité(produitObj,article));
             article.querySelector('[data-action="diminuer"]').addEventListener('click',() => diminuerQuantité(produitObj,btn,article));
             article.querySelector('[data-action="supprimer"]').addEventListener('click',() => supprimerArticle(produitObj,btn,article));
@@ -91,7 +91,7 @@ function actionBtn(btn,produitObj){
 }
 function augmenterQuantité(produitObj,article){
     panierArray.forEach(item => {
-        if(item.img === produitObj.img){
+        if(item.nom === produitObj.nom){
             article.querySelector('.quantité_article').innerText = ++item.quantité;
             article.querySelector('[data-action="diminuer"]').classList.remove('btn--danger');
             Sauvgarder();
@@ -100,7 +100,7 @@ function augmenterQuantité(produitObj,article){
 }
 function diminuerQuantité(produitObj,btn,article){
     panierArray.forEach(item => {
-        if(item.img === produitObj.img){
+        if(item.nom === produitObj.nom){
             if(item.quantité > 1){
              article.querySelector('.quantité_article').innerText = --item.quantité; 
              Sauvgarder();
@@ -116,7 +116,7 @@ function diminuerQuantité(produitObj,btn,article){
 function supprimerArticle(produitObj,btn,article){
     article.classList.add('article__panier--diminué');
     setTimeout(() => article.remove(),230);
-    panierArray = panierArray.filter(itemx => itemx.img !== produitObj.img);
+    panierArray = panierArray.filter(itemx => itemx.nom !== produitObj.nom);
     Sauvgarder();
     btn.innerText = 'Ajouter';
     btn.disabled = false;   
