@@ -51,6 +51,7 @@ Btns_ajout.forEach( btn => {
             
     });
 });
+
 function inserer_DOM(produitObj){
     panier.insertAdjacentHTML('beforeend', `
     <div class="article_panier container">
