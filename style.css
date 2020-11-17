@@ -206,7 +206,7 @@
   }
   .article_panier{
     display: grid;
-    grid-template-columns: 2rem 2rem auto 0.5rem auto auto;
+    grid-template-columns: 2rem 4rem auto 0.5rem auto auto;
     justify-content: space-between;
     align-items: center;  
     text-align: center;
