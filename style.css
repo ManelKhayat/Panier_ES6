@@ -215,8 +215,9 @@
     animation: .3s add-cart-item;
   }
   .article_panier:hover {
-    background-color: var(--color-primary-light);
-    color: white;
+    /* background-color: var(--color-primary-light);
+    color: white; */
+    border: #222;
   }
   
   .btn-space {
