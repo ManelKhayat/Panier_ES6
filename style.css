@@ -217,7 +217,7 @@
   .article_panier:hover {
     /* background-color: var(--color-primary-light);
     color: white; */
-    border: #222;
+    border: solid #222;
   }
   
   .btn-space {
