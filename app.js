@@ -55,7 +55,7 @@ Btns_ajout.forEach( btn => {
 function inserer_DOM(produitObj){
     panier.insertAdjacentHTML('beforeend', `
     <div class="article_panier container">
-        <img class="img_article_panier" src="${produitObj.img}" alt="${produitObj.nom}">
+        <img class="img_article_panier" src="${produitObj.img}" alt="${produitObj.nom}"><br><br>
         <h3 class="nom_article_panier">${produitObj.nom}</h3>
         <h3 class="prix_article_panier ">${produitObj.prix}</h3>
         <button class="btn btn--primary btn--small btn-space${(produitObj.quantité === 1 ? ' btn--danger':'')}" data-action="diminuer" style="text-align:center;border-radius:10px;width:94%;"><i class="fas fa-minus"></i></button>
