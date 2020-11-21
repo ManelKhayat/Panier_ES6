@@ -1,6 +1,5 @@
 # Panier d'achat en ligne
 > C'est mon premier mini-projet pour apprendre la technologie ES6 qui a été réalisé pour tester et mémoriser des connaissances acquises à partir des cours en ligne sur la structure de base des codes développés avec html,css et javascript. Ce test m'a permis de voir où sont mes forces, où et sur quelles parties de ce nouveau langage je devais travailler plus.
-
 Dans ce mini-projet j'ai fait recours au stockage local des données.
 
 ![Example screenshot](./img/produits/Capture.JPG)
